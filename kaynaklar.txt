@@ -1,0 +1,5 @@
+import-export js file
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+
+js arrow functions
+https://www.w3schools.com/js/js_arrow_function.asp
