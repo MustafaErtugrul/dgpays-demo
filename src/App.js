@@ -1,25 +1,22 @@
 // import Hello2, { cities as sehiler, countries } from "./cities";
-import Footer from "./templateSample/Footer";
-import Header from "./templateSample/Header";
-import Navbar from "./templateSample/Navbar";
-import PageContent from "./templateSample/PageContent";
 
+import CategoryPage from "./propSample/CategoryPage";
+import CountryList from "./propSample/CountryList";
+import ProductDetail from "./propSample/ProductDetail";
+import WebUserDetail from "./propSample/WebUserDetail";
 
 //<> </> Fragment olarak geçiyor
 function App() {
 
-
-  // console.log('cities', sehiler.length);
-  // console.log('countries', countries);
+  const ulkeler = ['Türkiye', 'Rusya', 'Almanya', 'Azerbaycan'];
 
   return (
     <>
-      <Navbar/>
-      <Header/>
-      <PageContent/>
-      <Footer/>
+    <ProductDetail name="IPhone" price={40} />
+      {/* <CategoryPage /> */}
+      {/* <CountryList title='Suppliers country list' countries={ulkeler} /> */}
+      {/* <WebUserDetail name='Çağatay' surname='Yıldız' age={18} /> */}
     </>
-
   );
 }
 
