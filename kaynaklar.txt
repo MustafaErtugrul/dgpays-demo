@@ -3,3 +3,19 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/imp
 
 js arrow functions
 https://www.w3schools.com/js/js_arrow_function.asp
+
+
+prop drilling
+https://blog.logrocket.com/solving-prop-drilling-react-apps/
+
+prop types
+https://www.freecodecamp.org/news/how-to-use-proptypes-in-react/
+
+
+react keys
+https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js/43892905#43892905
+
+
+js spread sytnax
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
