@@ -4,10 +4,9 @@ import CategoryPage from "./propSample/CategoryPage";
 import CountryList from "./propSample/CountryList";
 import ProductDetail from "./propSample/ProductDetail";
 import WebUserDetail from "./propSample/WebUserDetail";
-import StateSample from "./stateSample/StateSample";
-import StateSample2 from "./stateSample/StateSample2";
-import StateSample3 from "./stateSample/StateSample3";
-import StateSample4 from "./stateSample/StateSample4";
+import StateExample from "./stateSample/StateExample";
+import StateInput from "./stateSample/StateInput";
+import StateSampleTooMany from "./stateSample/StateSampleTooMany";
 
 //<> </> Fragment olarak geçiyor
 function App() {
@@ -16,10 +15,8 @@ function App() {
 
   return (
     <>
-      <StateSample4 />
-      {/* <StateSample3 /> */}
-      {/* <StateSample2 /> */}
-      {/* <StateSample /> */}
+      <StateExample />
+      {/* <StateInput /> */}
       {/* <ProductDetail name="IPhone" price={40} /> */}
       {/* <CategoryPage /> */}
       {/* <CountryList title='Suppliers country list' countries={ulkeler} /> */}
