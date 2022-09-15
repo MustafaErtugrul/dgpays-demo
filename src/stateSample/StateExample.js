@@ -4,6 +4,7 @@ function StateExample() {
 
     const [cityName, setcityName] = useState('');
     const [cities, setcities] = useState([]);
+    const [updateKey, setupdateKey] = useState(null);
 
     const add = () => {
         if (cityName != '') {
@@ -19,6 +20,21 @@ function StateExample() {
         setcities([]);
     }
 
+    const update = () => {
+
+
+        cities[updateKey] = cityName;
+        setcities([...cities]);
+
+    }
+
+    const changeInput = (item, key) => {
+
+        setcityName(item);
+        setupdateKey(key);
+
+    }
+
     return (<>
         <div>
             <label>Name:</label>
@@ -26,13 +42,14 @@ function StateExample() {
         </div>
         <div>
             <button onClick={() => add()}>Add</button>
+            <button onClick={() => update()}>Update</button>
         </div>
         <div>
             {/* && synatx undefined veya null check */}
             <ul>
                 {
                     cities && cities.map((item, key) => {
-                        return <li key={key}>{item}</li>
+                        return <li onClick={() => changeInput(item, key)} style={{cursor:'pointer'}} key={key}>{item}</li>
                     })
                 }
             </ul>
