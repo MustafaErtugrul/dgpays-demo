@@ -1,3 +1,8 @@
 Pratik - 1
 13 Eylül - Reactjs Template Örneği
 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_architect&stacked=h
+
+
+Pratik - 2
+16 Eylül - List, Add, Delete Sample
+categories isimli data ile ProductPage örneğindeki gibi propları kullanarak add, list ve delete işlemlerini gerçekleştir... Ayrıca sayfanın tepesine category count u h1 olarak yazdır.

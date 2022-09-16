@@ -1,5 +1,6 @@
 // import Hello2, { cities as sehiler, countries } from "./cities";
 
+import Counter from "./effect/Counter";
 import CategoryPage from "./propSample/CategoryPage";
 import CountryList from "./propSample/CountryList";
 import ProductDetail from "./propSample/ProductDetail";
@@ -17,8 +18,7 @@ function App() {
 
   return (
     <>
-      <SupplierPage />
-      {/* <ProductPage/> */}
+      <Counter />
       {/* <StateInput /> */}
       {/* <ProductDetail name="IPhone" price={40} /> */}
       {/* <CategoryPage /> */}
