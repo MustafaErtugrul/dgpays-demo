@@ -4,6 +4,7 @@ import CategoryPage from "./propSample/CategoryPage";
 import CountryList from "./propSample/CountryList";
 import ProductDetail from "./propSample/ProductDetail";
 import WebUserDetail from "./propSample/WebUserDetail";
+import SupplierPage from "./propState/SupplierPage";
 import ProductPage from "./stateSample/ProductPage";
 import StateExample from "./stateSample/StateExample";
 import StateInput from "./stateSample/StateInput";
@@ -16,7 +17,8 @@ function App() {
 
   return (
     <>
-      <ProductPage/>
+      <SupplierPage />
+      {/* <ProductPage/> */}
       {/* <StateInput /> */}
       {/* <ProductDetail name="IPhone" price={40} /> */}
       {/* <CategoryPage /> */}
