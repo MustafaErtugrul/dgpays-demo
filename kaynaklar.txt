@@ -24,6 +24,7 @@ https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmi
 
 
 js abortcontroller
+https://developer.mozilla.org/en-US/docs/Web/API/AbortController
 
 
 react arrow function nedenler

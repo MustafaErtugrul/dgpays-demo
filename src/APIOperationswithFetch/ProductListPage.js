@@ -13,16 +13,21 @@ function ProductListPage() {
 
     useEffect(() => {
 
-        getProducts();
+        const myAbortController = new AbortController();
+        getProducts(myAbortController);
+
+        return () => {
+            myAbortController.abort();
+        }
 
     }, [products]);
 
 
 
-    const getProducts = () => {
+    const getProducts = (myAbortController) => {
 
         //fetch eğer tek bir parametre alıyorsa bu default olarak GET isteği anlamına gelir!
-        fetch('https://northwind.vercel.app/api/products')
+        fetch('https://northwind.vercel.app/api/products', { signal: myAbortController.signal })
             .then(response => response.json())
             .then(data => {
                 setTimeout(() => {
@@ -34,6 +39,7 @@ function ProductListPage() {
             .catch(err => {
                 console.log('err', err);
             })
+
     }
 
     //delete butonuna tıklandığında aldığım id ye göre WEB SERVİSE DELETE isteği atacağım.
