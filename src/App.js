@@ -1,5 +1,6 @@
 // import Hello2, { cities as sehiler, countries } from "./cities";
 
+import ProductListPage from "./APIOperationswithFetch/ProductListPage";
 import Counter from "./effect/Counter";
 import CategoryPage from "./propSample/CategoryPage";
 import CountryList from "./propSample/CountryList";
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Counter />
+      <ProductListPage />
       {/* <StateInput /> */}
       {/* <ProductDetail name="IPhone" price={40} /> */}
       {/* <CategoryPage /> */}

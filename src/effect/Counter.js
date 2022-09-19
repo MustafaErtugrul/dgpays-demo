@@ -5,7 +5,8 @@ function Counter() {
     console.log('Counter component rendered!!');
 
     const [counter, setcounter] = useState(0);
-    const [counter2, setcounter2] = useState(0)
+    const [counter2, setcounter2] = useState(0);
+
 
     //1. parametre useEffect içerisindeki fonksiyon.
     //2. parametre dependency

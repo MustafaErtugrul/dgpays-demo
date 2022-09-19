@@ -22,4 +22,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spre
 fake filler chrome extension
 https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo
 
+
+js abortcontroller
+
+
 react arrow function nedenler
