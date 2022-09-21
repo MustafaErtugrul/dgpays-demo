@@ -1,5 +1,8 @@
 // import Hello2, { cities as sehiler, countries } from "./cities";
 
+import AddCategory from "./APIOperationsWithAxios/AddCategory";
+import SupplierList from "./APIOperationsWithAxios/SupplierList";
+import TodoPage from "./APIOperationsWithAxios/TodoPage";
 import AddProduct from "./APIOperationswithFetch/AddProduct";
 import ProductListPage from "./APIOperationswithFetch/ProductListPage";
 import Counter from "./effect/Counter";
@@ -19,9 +22,17 @@ function App() {
 
   const ulkeler = ['Türkiye', 'Rusya', 'Almanya', 'Azerbaycan'];
 
+
+
   return (
     <>
-      <AddProduct />
+
+
+      <AddCategory />
+      {/* <SupplierList /> */}
+      {/* <AddCategory /> */}
+      {/* <TodoPage/> */}
+      {/* <AddProduct /> */}
       {/* <EffectInterval />
       <ProductListPage /> */}
       {/* <StateInput /> */}
