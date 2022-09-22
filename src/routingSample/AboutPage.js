@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function AboutPage() {
@@ -8,6 +8,14 @@ function AboutPage() {
     const goToBack = () => {
         navigate(-1);
     }
+
+    useEffect(() => {
+      
+        
+        console.log('ABOUT!');
+
+    }, [])
+    
 
 
     return (

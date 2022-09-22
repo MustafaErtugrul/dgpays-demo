@@ -1,12 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { redirect, useNavigate } from 'react-router-dom'
 
 function HomePage() {
 
     const navigate = useNavigate();
 
     const goToAbout = () => {
-        navigate('/about')
+      navigate('/about')
     }
 
     return (

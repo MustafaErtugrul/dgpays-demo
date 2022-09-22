@@ -27,4 +27,9 @@ js abortcontroller
 https://developer.mozilla.org/en-US/docs/Web/API/AbortController
 
 
+route config
+https://www.digitalocean.com/community/tutorials/react-react-router-map-to-routes
+
+provider
+
 react arrow function nedenler
