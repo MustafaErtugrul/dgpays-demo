@@ -1,4 +1,6 @@
 import { Navigate } from "react-router-dom";
+import FavoritesPage from "../contextSample/FavoritesPage";
+import ProductPage from "../contextSample/ProductPage";
 import NoMatch from "../stateSample/NoMatch";
 import AboutPage from "./AboutPage";
 import AdminHomePage from "./AdminHomePage";
@@ -32,8 +34,16 @@ export const routeConfig =
     },
     {
         path:'/products',
-        element:<Navigate to='/' replace />
+        element:<ProductPage />
     },
+    {
+        path:'/favorites',
+        element:<FavoritesPage />
+    },
+    // {
+    //     path:'/products',
+    //     element:<Navigate to='/' replace />
+    // },
     {
         path:'/admin',
         element:<RequireAuth><AdminHomePage /></RequireAuth>
