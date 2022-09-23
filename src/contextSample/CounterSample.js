@@ -6,10 +6,12 @@ function CounterSample() {
     const {counter, setcounter} = useContext(counterContext);
 
 
+
     const increase = () => {
 
         localStorage.setItem('counter', counter + 1)
         setcounter(counter + 1);
+        
 
     }
 

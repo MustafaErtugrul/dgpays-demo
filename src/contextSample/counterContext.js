@@ -6,16 +6,17 @@ export const counterContext = createContext(null);
 
 export const CounterProvider = ({children}) => {
 
-
-
     const [counter, setcounter] = useState(0);
+
+
+    console.log('DİKKAT');
 
     useEffect(() => {
         
        var counter = localStorage.getItem('counter');
 
        if(counter){
-           setcounter(counter)
+           setcounter(Number(counter))
        }
 
     }, [])
