@@ -4,9 +4,7 @@ import { favoritesContext } from './favoritesContext';
 function ProductPage() {
 
     const [products, setproducts] = useState([]);
-
     const { favorites, setfavorites } = useContext(favoritesContext);
-
 
     useEffect(() => {
 
@@ -24,11 +22,23 @@ function ProductPage() {
         //eğer bu ürün favorilerde varsa ekleme!
         let favoriteProduct = favorites.find(q => q.id == item.id);
 
-        if(!favoriteProduct){
+        if (!favoriteProduct) {
             setfavorites([...favorites, item])
         }
 
-      
+    }
+
+    const isFavorite = (id) => {
+
+
+        let favoriProduct = favorites.find(q => q.id == id);
+
+        if (favoriProduct) {
+            return true;
+        }
+        else {
+            return false;
+        }
 
     }
 
@@ -49,7 +59,15 @@ function ProductPage() {
                             <td>{item.id}</td>
                             <td>{item.name}</td>
                             <td>{item.unitPrice}</td>
-                            <td><button onClick={() => addToFavorites(item)}>Add To Favorites</button></td>
+                            <td>
+                                {
+
+                                    isFavorite(item.id) == true ?
+                                        <button onClick={() => addToFavorites(item)}>Remove Favorites</button> 
+                                        :
+                                        <button onClick={() => addToFavorites(item)}>Add To Favorites</button>
+                                }
+                            </td>
 
                         </tr>
                     })

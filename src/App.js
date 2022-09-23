@@ -30,6 +30,7 @@ function App() {
         <li><Link to='/admin'>Go To Admin</Link></li>
         <li><Link to='/products'>Products</Link></li>
         <li><Link to='/favorites'>Favorites</Link></li>
+        <li><Link to='/counter'>Counter</Link></li>
 
       </ul>
       <Routes>

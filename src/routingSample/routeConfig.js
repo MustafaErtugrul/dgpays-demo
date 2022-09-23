@@ -1,4 +1,5 @@
 import { Navigate } from "react-router-dom";
+import CounterSample from "../contextSample/CounterSample";
 import FavoritesPage from "../contextSample/FavoritesPage";
 import ProductPage from "../contextSample/ProductPage";
 import NoMatch from "../stateSample/NoMatch";
@@ -39,6 +40,10 @@ export const routeConfig =
     {
         path:'/favorites',
         element:<FavoritesPage />
+    },
+    {
+        path:'/counter',
+        element:<CounterSample />
     },
     // {
     //     path:'/products',
