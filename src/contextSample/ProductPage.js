@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { favoritesContext } from './favoritesContext';
 
 function ProductPage() {
@@ -14,6 +15,7 @@ function ProductPage() {
 
     }, []);
 
+    let navigate = useNavigate();
 
     const addToFavorites = (item) => {
 
@@ -42,6 +44,22 @@ function ProductPage() {
 
     }
 
+
+    const goDetail = (name, id) => {
+
+        name = convertToSlug(name);
+        navigate('/products/' + id + "/" + name);
+
+    }
+
+    function convertToSlug(Text) {
+        return Text
+            .toLowerCase()
+            .replace(/ /g, '-')
+            .replace(/[^\w-]+/g, '')
+            ;
+    }
+
     return (<>
         <table>
             <thead>
@@ -63,11 +81,12 @@ function ProductPage() {
                                 {
 
                                     isFavorite(item.id) == true ?
-                                        <button onClick={() => addToFavorites(item)}>Remove Favorites</button> 
+                                        <button onClick={() => addToFavorites(item)}>Remove Favorites</button>
                                         :
                                         <button onClick={() => addToFavorites(item)}>Add To Favorites</button>
                                 }
                             </td>
+                            <td><button onClick={() => goDetail(item.name, item.id)}>Go to detail</button></td>
 
                         </tr>
                     })

@@ -7,6 +7,7 @@ import AboutPage from "./AboutPage";
 import AdminHomePage from "./AdminHomePage";
 import ContactPage from "./ContactPage";
 import HomePage from "./HomePage";
+import ProductDetail from "./ProductDetail";
 import { RequireAuth } from "./RequireAuth";
 import UserDetail from "./UserDetail";
 import UsersPage from "./UsersPage";
@@ -36,6 +37,10 @@ export const routeConfig =
     {
         path:'/products',
         element:<ProductPage />
+    },
+    {
+        path:'/products/:id/:name',
+        element:<ProductDetail/>
     },
     {
         path:'/favorites',
