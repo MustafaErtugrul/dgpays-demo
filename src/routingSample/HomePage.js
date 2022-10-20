@@ -1,12 +1,8 @@
-import React, { useContext } from 'react'
-import { redirect, useNavigate } from 'react-router-dom'
-import { counterContext } from '../contextSample/counterContext';
+import { useNavigate } from 'react-router-dom'
 
 function HomePage() {
 
     const navigate = useNavigate();
-
-    const { counter } = useContext(counterContext)
 
     const goToAbout = () => {
         navigate('/about')
@@ -14,8 +10,7 @@ function HomePage() {
 
     return (
         <>
-            <div>HomePage</div>
-            <h1>{counter}</h1>
+            <div>HomePage v3</div>
             <button onClick={() => goToAbout()}>Go to About Page</button>
 
         </>

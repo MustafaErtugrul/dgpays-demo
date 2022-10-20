@@ -1,11 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { favoritesContext } from './favoritesContext';
 
 function ProductPage() {
 
     const [products, setproducts] = useState([]);
-    const { favorites, setfavorites } = useContext(favoritesContext);
 
     useEffect(() => {
 
@@ -16,34 +14,6 @@ function ProductPage() {
     }, []);
 
     let navigate = useNavigate();
-
-    const addToFavorites = (item) => {
-
-        //context üzerindeki global state e bir favori ekleyecek
-
-        //eğer bu ürün favorilerde varsa ekleme!
-        let favoriteProduct = favorites.find(q => q.id == item.id);
-
-        if (!favoriteProduct) {
-            setfavorites([...favorites, item])
-        }
-
-    }
-
-    const isFavorite = (id) => {
-
-
-        let favoriProduct = favorites.find(q => q.id == id);
-
-        if (favoriProduct) {
-            return true;
-        }
-        else {
-            return false;
-        }
-
-    }
-
 
     const goDetail = (name, id) => {
 
@@ -77,15 +47,6 @@ function ProductPage() {
                             <td>{item.id}</td>
                             <td>{item.name}</td>
                             <td>{item.unitPrice}</td>
-                            <td>
-                                {
-
-                                    isFavorite(item.id) == true ?
-                                        <button onClick={() => addToFavorites(item)}>Remove Favorites</button>
-                                        :
-                                        <button onClick={() => addToFavorites(item)}>Add To Favorites</button>
-                                }
-                            </td>
                             <td><button onClick={() => goDetail(item.name, item.id)}>Go to detail</button></td>
 
                         </tr>
